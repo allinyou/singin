@@ -1,0 +1,120 @@
+
+$main-color:#f78122;
+.h-center {
+    display: flex;
+    align-items: center;
+}
+
+.v-center {
+    display: flex;
+    justify-content: center;
+}
+
+.vh-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.column-space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column-align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    background: url(../imgs/1.png) no-repeat top left/100%;
+}
+
+.sing-top{
+    padding:0.8rem 0 0.5rem;
+    @extend .vh-center;
+    color:$main-color;
+    img{
+        width: 0.4rem;
+        align-self: center;
+    }
+    span{
+        font-size:0.5rem;
+        margin:0 0.4rem;
+        font-weight: bold;
+    }
+}
+.integral-num{
+    text-align: center;
+    color:$main-color;
+}
+
+.has-signed{
+    width: 2.48rem;
+    height: 0.84rem;
+    margin: 0.5rem auto;
+    @extend .vh-center;
+    color:$main-color;
+    border:1px solid $main-color;
+    border-radius:0.42rem;
+    font-size:0.34rem;
+    img{
+        width: 0.4rem;
+        margin-right:0.2rem;
+    }
+}
+
+
+.sing-box{
+    margin:0 auto;
+    width: 6.4rem;
+    height: 6.4rem;
+    padding:0.3rem;
+    border-radius:0.16rem;
+    background-image: -webkit-linear-gradient(top,$main-color,#d685a9);
+    .card{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.16rem;
+        background-color: #713a44;
+        float: left;
+        margin-right: 0.2rem;
+        margin-bottom: 0.2rem;
+        @extend .vh-center;
+        transition: transform 0.3s;
+        transform: rotateY(180deg);
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        img{
+            width: 0.7rem;
+            align-self: center;
+        }
+        &:nth-child(3n){
+            margin-right:0;
+        }
+        &.open{
+            transform: rotateY(360deg);
+            background-color:#fff;
+        }
+        
+    }
+    .card:nth-child(6) ~ .card{
+        margin-bottom:0;
+    }
+}
+
+.sign-days{
+    text-align: center;
+    margin-top:0.5rem;
+}

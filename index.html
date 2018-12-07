@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <script src="./js/rem.js"></script>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>每日签到</title>
+</head>
+<body>
+   <div class="sing-top">
+       <img src="./imgs/6.png" alt="">
+       <span>积分兑换</span>
+       <img src="./imgs/6.png" alt="">
+   </div> 
+   <div class="integral-num">您当前积分520</div>
+   <div class="has-signed">
+       <img src="./imgs/4.png" alt="">
+       <span>已签到</span>
+   </div>
+   <ul class="sing-box">
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+        <li class="card"></li>
+   </ul>
+   <div class="sign-days">已连续签到2天，继续加油！</div>
+</body>
+</html>
+<script src="./js/jquery-1.11.2.min.js"></script>
+<script>
+    var num = 2;
+    $(function() {
+        $('.sing-box .card').click(function() {
+            if ($(this).hasClass('open')) {
+                return;
+            }
+            if (num<1) {
+                alert('今日签到次数已用完，请明天再来');
+                return;
+            }
+            $(this).addClass('open');
+            var img = document.createElement('img');
+            img.src = "./imgs/3.png";
+            $(this).append(img);
+        })
+    })
+</script>
