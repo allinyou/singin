@@ -31,6 +31,15 @@
         <li class="card"></li>
    </ul>
    <div class="sign-days">已连续签到2天，继续加油！</div>
+   <div class="modal-box">
+       <div class="modal">
+           <p class="content">本次抓取需要消耗5积分，请确认是否继续？</p>
+           <div class="option-box">
+               <div class="option-btn option-cancel">取消</div>
+               <div class="option-btn option-confirm">确定</div>
+           </div>
+       </div>
+   </div>
 </body>
 </html>
 <script src="./js/jquery-1.11.2.min.js"></script>
@@ -45,10 +54,23 @@
                 alert('今日签到次数已用完，请明天再来');
                 return;
             }
+            $('.modal-box').show();
             $(this).addClass('open');
             var img = new Image();
             img.src = "./imgs/2.png";
             $(this).append(img);
+            alert('本次获得20积分');
+        })
+        
+        // 点击取消
+        $('.modal-box .option-cancel').click(function(){
+            $('.modal-box').hide();
+        })
+        
+        // 点击确定
+        $('.modal-box .option-confirm').click(function(){
+            $('.modal-box').hide();
+            alert('点击了确定');
         })
     })
 </script>

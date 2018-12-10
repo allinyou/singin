@@ -8,7 +8,7 @@
   justify-content: center;
 }
 
-.vh-center, .sing-top, .has-signed, .sing-box .card {
+.vh-center, .sing-top, .has-signed, .sing-box .card, .modal-box .modal .option-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,4 +119,56 @@ body {
 .sign-days {
   text-align: center;
   margin-top: 0.5rem;
+}
+
+.modal-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: none;
+}
+
+.modal-box .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5rem;
+  height: 3.4rem;
+  background-color: #fff;
+  margin-top: -2rem;
+  margin-left: -2.5rem;
+  border-radius: 0.1rem;
+}
+
+.modal-box .modal .content {
+  width: 80%;
+  margin: 0.8rem auto 0;
+  text-align: center;
+  line-height: 0.4rem;
+}
+
+.modal-box .modal .option-box {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  width: 100%;
+}
+
+.modal-box .modal .option-box .option-btn {
+  width: 1.8rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  text-align: center;
+  border-radius: 0.1rem;
+  background-color: #999999;
+  color: #fff;
+}
+
+.modal-box .modal .option-box .option-confirm {
+  background-color: #f78122;
+  margin-left: 0.4rem;
 }
